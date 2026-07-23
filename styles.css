@@ -1,0 +1,63 @@
+*{margin:0;padding:0;font-family:Poppins,Arial,sans-serif;font-weight:500;box-sizing:border-box}
+body{background:#fff;color:#111}
+a{text-decoration:none}
+.page{max-width:500px;margin:0 auto;background:#fff;min-height:100vh}
+.hero-wrap{position:relative;overflow:hidden;background:#111}
+.hero{display:block;width:100%;height:auto}
+.hero-wrap::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20%;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.62));pointer-events:none}
+.hero-overlay{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;text-align:center}
+.hero-cta{width:100%;max-width:330px;margin:0 auto;background:#d4af37;color:#16110a;font-weight:700;font-size:18px;border-radius:7px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.hero-cta:hover,.hero-cta:active{background:#edc95a}
+marquee{height:50px;line-height:50px;font-size:16px;font-weight:700}
+.A{text-align:center;background:#111;color:#fff;padding:12px 8px;line-height:1.5}
+.A strong{display:block;color:#e7c65b;font-size:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:10px;background:#f7f5ef;border-bottom:1px solid #e4dfd0}
+.step{font-size:10px;text-align:center;color:#7b756a;padding:7px 2px;border-radius:4px;background:#ece8dc}
+.step.active{background:#111;color:#e7c65b;font-weight:700}
+.post{background:#fff;margin:0 auto;padding:10px;border:1px solid #d0d1d5;border-radius:3px}
+.welcome{font-size:15px;line-height:1.55}
+.amount,#getname{color:#9a7412}
+.done{text-align:center;color:#27ae60;font-size:46px}
+.tip{font-size:14px;line-height:1.6}
+.title{text-align:center;font-size:15px;margin:8px 0}
+.error{display:none;text-align:center;font-size:14px;color:#e74c3c}
+button{display:block;width:220px;height:50px;color:#fff;border:0;outline:0;font-size:20px;cursor:pointer;border-radius:5px;padding:0 10px;margin:10px auto;background:#111}
+button:hover,button:active{background:#2a2a2a}
+.phone{max-width:400px;margin:10px auto}
+.phone input{display:block;width:330px;max-width:100%;height:56px;margin:10px auto;padding:10px;border:2px solid #cecece;font-size:18px;outline:none}
+#loader,#info,#checking,#share,#claim{display:none}
+#loader{text-align:center;padding:18px 0}
+.spin{width:50px;height:50px;background:transparent;border:8px solid #d4af37;border-right-color:transparent;border-radius:50%;margin:10px auto;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.barr{direction:ltr;max-width:400px;margin:10px auto;overflow:hidden}
+.fill{position:relative;display:inline-block;width:calc(100% - 100px);height:35px;padding:2px;border:2px solid #9a7412;vertical-align:top}
+#fill,#fill2{background:#9a7412;width:0;height:100%;transition:width .2s linear}
+.percentage{display:flex;align-items:center;justify-content:center;width:95px;float:right;height:35px;font-size:16px;border:2px solid #9a7412}
+.share-note{padding:12px;background:#f7f7f7;border-radius:4px;margin:10px 0}
+.claim-actions{display:grid;gap:10px}
+.claim-actions button{width:100%;margin:0}
+.comments{margin-top:14px;border-top:1px solid #e1e2e3;padding-top:10px;direction:ltr}
+.counter{color:#7f7f7f;font-size:12px;text-align:right;padding:10px 0;border-bottom:1px solid #e1e2e3}
+.reactions{display:inline-flex;align-items:center;float:left}
+.counter img{float:left;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-sizing:content-box}
+.like,.love{margin-right:-5px}
+.like{z-index:2}
+.love{z-index:1}
+.bar{display:table;width:100%;border-bottom:1px solid #e1e2e3}
+.bar .react{display:table-cell;width:33.33%;font-size:12px;color:#7f7f7f;text-align:center;padding:10px 0;cursor:pointer}
+.comment{padding:6px 0;margin-top:5px}
+.comment img{float:left;width:32px;height:32px;border:none;border-radius:18px;cursor:pointer}
+.reply{margin-left:37px}
+.single-container{margin-left:37px;background:#f1f2f6;padding:10px;border-radius:15px;font-size:12px}
+.single-container .user{display:inline-block;cursor:pointer;color:#365899;margin-bottom:5px}
+.single-container .text{display:block}
+.buttons{font-size:12px;font-weight:bold;margin:10px 0 0 47px;color:#90949c}
+.action{cursor:pointer}
+.action:hover{text-decoration:underline}
+.input{padding:6px 12px 12px}
+.input input{width:100%;background:#f1f2f6;padding:10px;border-radius:15px;border:0;outline:none}
+.status-box{background:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:12px;margin:12px 0;font-size:13px;line-height:1.65}
+.share-feedback{display:none;padding:10px 12px;margin:10px 0;border-radius:4px;font-size:13px;line-height:1.55}
+.share-feedback.fail{display:block;background:#fff1f0;border:1px solid #f1b6b2;color:#a61b12}
+.share-feedback.ok{display:block;background:#edf9f0;border:1px solid #a9dfb5;color:#146b2d}
+@media(max-width:380px){button{width:100%}}
