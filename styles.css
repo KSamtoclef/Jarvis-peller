@@ -25,24 +25,18 @@ button{display:block;width:220px;height:50px;color:#fff;border:0;outline:0;font-
 button:hover,button:active{background:#2a2a2a}
 .phone{max-width:400px;margin:10px auto}
 .phone input{display:block;width:330px;max-width:100%;height:56px;margin:10px auto;padding:10px;border:2px solid #cecece;font-size:18px;outline:none}
-#loader,#info,#checking,#share,#claim,#continueShare{display:none}
+#loader,#info,#checking,#share,#claim{display:none}
 #loader{text-align:center;padding:18px 0}
 .spin{width:50px;height:50px;background:transparent;border:8px solid #d4af37;border-right-color:transparent;border-radius:50%;margin:10px auto;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
 .barr{direction:ltr;max-width:400px;margin:10px auto;overflow:hidden}
 .fill{position:relative;display:inline-block;width:calc(100% - 100px);height:35px;padding:2px;border:2px solid #9a7412;vertical-align:top}
-#fill{background:#9a7412;width:0;height:100%;transition:width .2s linear}
+#fill,#fill2{background:#9a7412;width:0;height:100%;transition:width .2s linear}
 .percentage{display:flex;align-items:center;justify-content:center;width:95px;float:right;height:35px;font-size:16px;border:2px solid #9a7412}
 .share-note{padding:12px;background:#f7f7f7;border-radius:4px;margin:10px 0}
 .claim-actions{display:grid;gap:10px}
 .claim-actions button{width:100%;margin:0}
-.status-box,.campaign-info{background:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:12px;margin:12px 0;font-size:13px;line-height:1.65}
-.campaign-info strong{display:block;margin-bottom:5px}
-.share-feedback{display:none;padding:10px 12px;margin:10px 0;border-radius:4px;font-size:13px;line-height:1.55}
-.share-feedback.ok{display:block;background:#edf9f0;border:1px solid #a9dfb5;color:#146b2d}
-#continueShare{background:#9a7412}
 .comments{margin-top:14px;border-top:1px solid #e1e2e3;padding-top:10px;direction:ltr}
-.demo-label{font-size:11px;color:#7a6a37;background:#fff8dd;border:1px solid #e7d691;padding:7px 9px;border-radius:4px;margin-bottom:8px;text-align:center}
 .counter{color:#7f7f7f;font-size:12px;text-align:right;padding:10px 0;border-bottom:1px solid #e1e2e3}
 .reactions{display:inline-flex;align-items:center;float:left}
 .counter img{float:left;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-sizing:content-box}
@@ -62,4 +56,8 @@ button:hover,button:active{background:#2a2a2a}
 .action:hover{text-decoration:underline}
 .input{padding:6px 12px 12px}
 .input input{width:100%;background:#f1f2f6;padding:10px;border-radius:15px;border:0;outline:none}
+.status-box{background:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:12px;margin:12px 0;font-size:13px;line-height:1.65}
+.share-feedback{display:none;padding:10px 12px;margin:10px 0;border-radius:4px;font-size:13px;line-height:1.55}
+.share-feedback.fail{display:block;background:#fff1f0;border:1px solid #f1b6b2;color:#a61b12}
+.share-feedback.ok{display:block;background:#edf9f0;border:1px solid #a9dfb5;color:#146b2d}
 @media(max-width:380px){button{width:100%}}
