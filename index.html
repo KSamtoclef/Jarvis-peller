@@ -11,74 +11,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;font-family:Poppins,Arial,sans-serif;font-weight:500;box-sizing:border-box}
-    body{background:#fff;color:#111}a{text-decoration:none}.page{max-width:500px;margin:0 auto;background:#fff;min-height:100vh}
-    .hero-wrap{position:relative;overflow:hidden;background:#111}.hero{display:block;width:100%;height:auto}.hero-wrap::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20%;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.62));pointer-events:none}
-    .hero-overlay{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;text-align:center}.hero-cta{width:100%;max-width:330px;margin:0 auto;background:#d4af37;color:#16110a;font-weight:700;font-size:18px;border-radius:7px;box-shadow:0 4px 12px rgba(0,0,0,.3)}.hero-cta:hover,.hero-cta:active{background:#edc95a}
-    marquee{height:50px;line-height:50px;font-size:16px;font-weight:700}.A{text-align:center;background:#111;color:#fff;padding:12px 8px;line-height:1.5}.A strong{display:block;color:#e7c65b;font-size:18px}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:10px;background:#f7f5ef;border-bottom:1px solid #e4dfd0}.step{font-size:10px;text-align:center;color:#7b756a;padding:7px 2px;border-radius:4px;background:#ece8dc}.step.active{background:#111;color:#e7c65b;font-weight:700}
-    .post{background:#fff;margin:0 auto;padding:10px;border:1px solid #d0d1d5;border-radius:3px}.welcome{font-size:15px;line-height:1.55}.amount,#getname{color:#9a7412}.done{text-align:center;color:#27ae60;font-size:46px}.tip{font-size:14px;line-height:1.6}.title{text-align:center;font-size:15px;margin:8px 0}.error{display:none;text-align:center;font-size:14px;color:#e74c3c}
-    button{display:block;width:220px;height:50px;color:#fff;border:0;outline:0;font-size:20px;cursor:pointer;border-radius:5px;padding:0 10px;margin:10px auto;background:#111}button:hover,button:active{background:#2a2a2a}
-    .phone{max-width:400px;margin:10px auto}.phone input{display:block;width:330px;max-width:100%;height:56px;margin:10px auto;padding:10px;border:2px solid #cecece;font-size:18px;outline:none}#loader,#info,#checking,#share,#claim{display:none}#loader{text-align:center;padding:18px 0}
-    .spin{width:50px;height:50px;background:transparent;border:8px solid #d4af37;border-right-color:transparent;border-radius:50%;margin:10px auto;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(1turn)}}
-    .barr{direction:ltr;max-width:400px;margin:10px auto;overflow:hidden}.fill{position:relative;display:inline-block;width:calc(100% - 100px);height:35px;padding:2px;border:2px solid #9a7412;vertical-align:top}#fill,#fill2{background:#9a7412;width:0;height:100%;transition:width .2s linear}.percentage{display:flex;align-items:center;justify-content:center;width:95px;float:right;height:35px;font-size:16px;border:2px solid #9a7412}
-    .share-note{padding:12px;background:#f7f7f7;border-radius:4px;margin:10px 0}.claim-actions{display:grid;gap:10px}.claim-actions button{width:100%;margin:0}.comments{margin-top:14px;border-top:1px solid #e1e2e3;padding-top:10px;direction:ltr}.counter{color:#7f7f7f;font-size:12px;text-align:right;padding:10px 0;border-bottom:1px solid #e1e2e3}.reactions{display:inline-flex;align-items:center;float:left}.counter img{float:left;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-sizing:content-box}.like,.love{margin-right:-5px}.like{z-index:2}.love{z-index:1}
-    .bar{display:table;width:100%;border-bottom:1px solid #e1e2e3}.bar .react{display:table-cell;width:33.33%;font-size:12px;color:#7f7f7f;text-align:center;padding:10px 0;cursor:pointer}.comment{padding:6px 0;margin-top:5px}.comment img{float:left;width:32px;height:32px;border:none;border-radius:18px;cursor:pointer}.reply{margin-left:37px}.single-container{margin-left:37px;background:#f1f2f6;padding:10px;border-radius:15px;font-size:12px}.single-container .user{display:inline-block;cursor:pointer;color:#365899;margin-bottom:5px}.single-container .text{display:block}.buttons{font-size:12px;font-weight:bold;margin:10px 0 0 47px;color:#90949c}.action{cursor:pointer}.action:hover{text-decoration:underline}.input{padding:6px 12px 12px}.input input{width:100%;background:#f1f2f6;padding:10px;border-radius:15px;border:0;outline:none}
-    .status-box{background:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:12px;margin:12px 0;font-size:13px;line-height:1.65}.share-feedback{display:none;padding:10px 12px;margin:10px 0;border-radius:4px;font-size:13px;line-height:1.55}.share-feedback.fail{display:block;background:#fff1f0;border:1px solid #f1b6b2;color:#a61b12}.share-feedback.ok{display:block;background:#edf9f0;border:1px solid #a9dfb5;color:#146b2d}@media(max-width:380px){button{width:100%}}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <main class="page">
   <div class="hero-wrap">
     <img class="hero" src="7F3FFD45-3D1C-4285-8EF5-A9071305839C.png" alt="Wedding Celebration ₦30,000 Cash Giveaway">
-    <div class="hero-overlay"><button class="hero-cta" id="heroGo">GET ₦30,000 CASH</button></div>
-  </div>
-  <marquee direction="left">WEDDING CELEBRATION ₦30,000 CASH GIVEAWAY</marquee>
-  <div class="A"><span>Join Us as We Celebrate This Special Wedding</span><strong>₦30,000 Cash Giveaway</strong></div>
-  <div class="steps" aria-label="Registration progress"><div class="step active" data-step="register">1. Register</div><div class="step" data-step="verify">2. Verify</div><div class="step" data-step="share">3. Share</div><div class="step" data-step="complete">4. Complete</div></div>
-  <div class="post">
-    <div id="intro"><p class="welcome"><span class="amount">WEDDING CELEBRATION GIVEAWAY</span><br>Join our wedding celebration and register for the ₦30,000 cash giveaway. Complete the registration steps below to participate.</p><br><p class="title">ENTER YOUR DETAILS BELOW</p><button id="go">START REGISTRATION</button></div>
-    <div id="loader"><div>Please Wait ...</div><div class="spin"></div><div id="num">0%</div></div>
-    <div id="info"><p class="title">ENTER YOUR NAME AND PHONE NUMBER:</p><div class="phone"><input type="text" id="fullName" autocomplete="name" placeholder="Enter your full name"><input type="tel" id="phoneNumber" inputmode="numeric" maxlength="14" autocomplete="tel" placeholder="Enter your phone number"><button id="confirm">Send</button></div><p class="error" id="formError">Please enter your full name and a valid phone number.</p></div>
-    <div id="checking"><p class="title">Checking your ₦30,000 Cash Giveaway eligibility...</p><div class="barr"><div class="fill"><div id="fill"></div></div><div class="percentage"><span id="percentage">0%</span></div></div></div>
-    <div id="share"><p class="tip">Congratulations, <span id="getname"></span>,</p><div class="share-note"><p class="tip">Your ₦30,000 Cash Giveaway registration is <font color="red"><b>pending</b></font> because the sharing stage has not been completed.</p><p class="tip"><span class="amount">Complete the sharing process to continue your registration.</span></p><br><p class="tip"><font color="red"><b>How to proceed?</b></font></p><p class="tip">1. Share it with 5 groups or 15 friends on WhatsApp by tapping SHARE below.</p><p class="tip">2. Return to this page and continue until the progress bar is filled.</p></div><div id="shareFeedback" class="share-feedback" aria-live="polite"></div><button id="whatsapp">SHARE</button><div class="barr"><div class="fill"><div id="fill2"></div></div><div class="percentage"><span id="percentage2">0%</span></div></div></div>
-    <div id="claim"><p class="done">✓</p><p class="title">Sharing stage completed.</p><div class="status-box">Your ₦30,000 Cash Giveaway registration can now continue. Final eligibility and payment depend on the published campaign terms and review.</div><div class="claim-actions"><button id="continueButton">CONTINUE</button><button id="paymentButton">PROCEED WITH PAYMENT</button><button id="statusButton">CHECK REGISTRATION STATUS</button></div></div>
-    <div class="comments">
-      <div class="counter"><div class="reactions"><img class="like" src="https://i.imgur.com/g6cV61A.png" alt=""><img class="love" src="https://i.imgur.com/0UHB1f0.png" alt=""><img class="care" src="https://i.imgur.com/sSMYbTT.png" alt=""><span id="likes">145K</span></div><span id="comments">28K comments</span> <span class="dot">·</span> <span id="shares">16K shares</span></div>
-      <div class="bar"><span class="react">👍 <a class="liked">Like</a></span><span class="react">💬 Comment</span><span class="react">↗ Share</span></div>
-      <div class="comment"><img src="https://i.imgur.com/xp1ER6K.jpg" alt=""><div class="single-container"><span class="user">Joseph Emmanuel</span><span class="text">Congratulations. I have completed my registration.</span></div><div class="buttons"><span class="time">1m</span> · <span class="action liked">Like</span> · <span class="action">Reply</span></div></div>
-      <div class="comment"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC5I3x2Ykht2M6Pktwjzc0xV7dmqJty_eCw4rDcFV5r_eDxXMRGWJF9tuYPEpe_fvnM0DtzfdDKbQUFKAhhnj1tXN97o8EJP_l_XFJeyX7dc1bm6bpocYaeGtrngVoV9TruTJrlONHypx0/s1600/FB_IMG_15869726679037399.jpg" alt=""><div class="single-container"><span class="user">David Anthony</span><span class="text">The wedding celebration registration steps were straightforward.</span></div><div class="buttons"><span class="time">2m</span> · <span class="action liked">Like</span> · <span class="action">Reply</span></div></div>
-      <div class="comment reply"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgAg5sqDhd96nW2Ek_9vet4ztoELeaZmKUSIgzUImj18MpjZvy2qNPXaEgkSNOxLtEOvrT2iPc9RuUUmu2xnhRydySo5WIFpWEJiYmuMDqXnPKrqFzC8aABhp-mrUbaqinlsgJ5LA6hwZS/s1600/FB_IMG_15869730921979436.jpg" alt=""><div class="single-container"><span class="user">Amahle John</span><span class="text">My registration is pending because I just finished sharing.</span></div><div class="buttons"><span class="time">1m</span> · <span class="action liked">Like</span> · <span class="action">Reply</span></div></div>
-      <div class="comment"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg" alt=""><div class="single-container"><span class="user">Bonolo</span><span class="text">I completed the steps and I am waiting for the final review.</span></div><div class="buttons"><span class="time">4m</span> · <span class="action liked">Like</span> · <span class="action">Reply</span></div></div>
-      <div class="input"><input placeholder="Write a comment..."></div>
+    <div class="hero-overlay">
+      <button class="hero-cta" id="heroGo">GET ₦30,000 CASH</button>
     </div>
   </div>
+
+  <marquee direction="left">WEDDING CELEBRATION ₦30,000 CASH GIVEAWAY</marquee>
+
+  <div class="A">
+    <span>Join Us as We Celebrate This Special Wedding</span>
+    <strong>₦30,000 Cash Giveaway</strong>
+  </div>
+
+  <div class="steps" aria-label="Registration progress">
+    <div class="step active" data-step="register">1. Register</div>
+    <div class="step" data-step="verify">2. Verify</div>
+    <div class="step" data-step="share">3. Share</div>
+    <div class="step" data-step="complete">4. Complete</div>
+  </div>
+
+  <div class="post">
+    <section id="intro">
+      <p class="welcome">
+        <span class="amount">WEDDING CELEBRATION GIVEAWAY</span><br>
+        Join our wedding celebration and register for the ₦30,000 cash giveaway. Complete the registration steps below to participate.
+      </p>
+      <div class="campaign-info">
+        <strong>Important campaign information</strong>
+        Registration does not guarantee payment. Final eligibility, selection and payment depend on the campaign terms and organizer review.
+      </div>
+      <p class="title">ENTER YOUR DETAILS BELOW</p>
+      <button id="go">START REGISTRATION</button>
+    </section>
+
+    <section id="loader">
+      <div>Please Wait ...</div>
+      <div class="spin"></div>
+      <div id="num">0%</div>
+    </section>
+
+    <section id="info">
+      <p class="title">ENTER YOUR NAME AND PHONE NUMBER:</p>
+      <div class="phone">
+        <input type="text" id="fullName" autocomplete="name" placeholder="Enter your full name">
+        <input type="tel" id="phoneNumber" inputmode="numeric" maxlength="14" autocomplete="tel" placeholder="Enter your phone number">
+        <button id="confirm">SEND</button>
+      </div>
+      <p class="error" id="formError">Please enter your full name and a valid phone number.</p>
+    </section>
+
+    <section id="checking">
+      <p class="title">Checking your registration details...</p>
+      <div class="barr">
+        <div class="fill"><div id="fill"></div></div>
+        <div class="percentage"><span id="percentage">0%</span></div>
+      </div>
+    </section>
+
+    <section id="share">
+      <p class="tip">Congratulations, <span id="getname"></span>.</p>
+      <div class="share-note">
+        <p class="tip">You may share the wedding celebration with friends or groups on WhatsApp.</p>
+        <p class="tip">Sharing is optional and this website cannot verify how many people you share with.</p>
+      </div>
+      <div id="shareFeedback" class="share-feedback" aria-live="polite"></div>
+      <button id="whatsapp">SHARE ON WHATSAPP</button>
+      <button id="continueShare">CONTINUE REGISTRATION</button>
+    </section>
+
+    <section id="claim">
+      <p class="done">✓</p>
+      <p class="title">Registration steps completed.</p>
+      <div class="status-box">
+        Your ₦30,000 Cash Giveaway registration can now continue. Final eligibility and payment depend on the published campaign terms and review.
+      </div>
+      <div class="claim-actions">
+        <button id="continueButton">CONTINUE</button>
+        <button id="paymentButton">PROCEED WITH PAYMENT</button>
+        <button id="statusButton">CHECK REGISTRATION STATUS</button>
+      </div>
+    </section>
+  </div>
 </main>
-<script>
-(function(){
-  const OFFER_CONFIG={continueUrl:"",paymentUrl:"",statusUrl:""};
-  const STORAGE_KEY="wedding30kShareProgress";
-  const sections=["intro","loader","info","checking","share","claim"];
-  const byId=id=>document.getElementById(id);
-  const show=id=>sections.forEach(name=>{byId(name).style.display=name===id?"block":"none";});
-  const onlyDigits=value=>String(value||"").replace(/\D/g,"");
-  let shareProgress=Number(localStorage.getItem(STORAGE_KEY)||0);
-  function setActiveStep(stepName){document.querySelectorAll(".step").forEach(step=>step.classList.toggle("active",step.dataset.step===stepName));}
-  function startRegistration(){setActiveStep("register");show("loader");window.scrollTo({top:document.querySelector(".steps").offsetTop,behavior:"smooth"});let progress=0;byId("num").textContent="0%";const timer=setInterval(()=>{progress+=1;byId("num").textContent=progress+"%";if(progress>=100){clearInterval(timer);show("info");}},25);}
-  byId("go").addEventListener("click",startRegistration);byId("heroGo").addEventListener("click",startRegistration);
-  byId("confirm").addEventListener("click",()=>{const fullName=byId("fullName").value.trim();const phoneNumber=onlyDigits(byId("phoneNumber").value);if(fullName.length<3||phoneNumber.length<10||phoneNumber.length>14){byId("formError").style.display="block";return;}byId("formError").style.display="none";sessionStorage.setItem("wedding30kName",fullName);sessionStorage.setItem("wedding30kPhone",phoneNumber);byId("getname").textContent=fullName;setActiveStep("verify");show("checking");let progress=0;const timer=setInterval(()=>{progress+=1;byId("percentage").textContent=progress+"%";byId("fill").style.width=progress+"%";if(progress>=100){clearInterval(timer);setTimeout(()=>{renderShare();if(shareProgress>=100){setActiveStep("complete");show("claim");}else{setActiveStep("share");show("share");}},300);}},25);});
-  function renderShare(){shareProgress=Math.max(0,Math.min(100,shareProgress));byId("fill2").style.width=shareProgress+"%";byId("percentage2").textContent=shareProgress+"%";if(shareProgress>=100){setActiveStep("complete");show("claim");}}
-  function buildShareText(){const pageUrl=location.href.split("#")[0];return ["*Wedding Celebration ₦30,000 Cash Giveaway*","","Join our wedding celebration and register for the ₦30,000 Cash Giveaway.","","Register here 👇",pageUrl].join("\n");}
-  const SHARE_STEPS=[{increment:50,counted:true},{increment:0,counted:false},{increment:15,counted:true},{increment:5,counted:true},{increment:0,counted:false},{increment:10,counted:true},{increment:5,counted:true},{increment:0,counted:false},{increment:5,counted:true},{increment:3,counted:true},{increment:2,counted:true},{increment:2,counted:true},{increment:1,counted:true},{increment:1,counted:true},{increment:1,counted:true}];
-  function setShareFeedback(type,message){const box=byId("shareFeedback");box.className="share-feedback "+type;box.textContent=message;}
-  byId("whatsapp").addEventListener("click",()=>{const currentStep=Number(localStorage.getItem(STORAGE_KEY+"Step")||0);const step=SHARE_STEPS[Math.min(currentStep,SHARE_STEPS.length-1)];localStorage.setItem(STORAGE_KEY+"Step",String(currentStep+1));if(step.counted){shareProgress=Math.min(100,shareProgress+step.increment);localStorage.setItem(STORAGE_KEY,String(shareProgress));setShareFeedback("ok","Share activity recorded. Return after WhatsApp opens to continue.");}else{setShareFeedback("fail","This share attempt was not counted yet. Open WhatsApp, choose another contact or group, then return and try again.");}renderShare();window.location.href="https://wa.me/?text="+encodeURIComponent(buildShareText());});
-  function openConfiguredUrl(url,fallbackMessage){if(url){window.location.href=url;}else{alert(fallbackMessage);}}
-  byId("continueButton").addEventListener("click",()=>openConfiguredUrl(OFFER_CONFIG.continueUrl,"Add your CONTINUE URL inside OFFER_CONFIG.continueUrl."));
-  byId("paymentButton").addEventListener("click",()=>openConfiguredUrl(OFFER_CONFIG.paymentUrl,"Add your payment URL inside OFFER_CONFIG.paymentUrl."));
-  byId("statusButton").addEventListener("click",()=>openConfiguredUrl(OFFER_CONFIG.statusUrl,"Add your status URL inside OFFER_CONFIG.statusUrl."));
-  const savedName=sessionStorage.getItem("wedding30kName");if(savedName)byId("getname").textContent=savedName;renderShare();
-})();
-</script>
+
+<script src="config.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
